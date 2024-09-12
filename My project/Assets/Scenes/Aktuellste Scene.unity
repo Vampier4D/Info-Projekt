@@ -132,11 +132,11 @@ GameObject:
   m_Component:
   - component: {fileID: 164924567}
   - component: {fileID: 164924566}
-  - component: {fileID: 164924568}
   - component: {fileID: 164924564}
   - component: {fileID: 164924563}
   - component: {fileID: 164924562}
   - component: {fileID: 164924569}
+  - component: {fileID: 164924570}
   m_Layer: 0
   m_Name: Navora
   m_TagString: Player
@@ -278,8 +278,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &164924568
-BoxCollider2D:
+--- !u!114 &164924569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164924561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e88ed6daf2a9d4f80ef0d3daa4658a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!68 &164924570
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -310,31 +322,29 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01539129, y: 0.0037041157}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.47162235, y: 0.4883912}
-    oldSize: {x: 0.5625, y: 0.515625}
-    newSize: {x: 0.5625, y: 0.515625}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.25749317, y: 0.5133109}
+  m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
---- !u!114 &164924569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 164924561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54e88ed6daf2a9d4f80ef0d3daa4658a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Points:
+  - {x: -0.23573196, y: 0.051022988}
+  - {x: -0.24507669, y: -0.0720475}
+  - {x: -0.21244498, y: -0.12586635}
+  - {x: -0.15851344, y: -0.14230016}
+  - {x: -0.092349574, y: -0.24788208}
+  - {x: -0.03267404, y: -0.24898708}
+  - {x: 0.008412952, y: -0.2248298}
+  - {x: 0.03970523, y: -0.24740055}
+  - {x: 0.11049298, y: -0.24927588}
+  - {x: 0.1307468, y: -0.09659484}
+  - {x: 0.26230973, y: -0.07445139}
+  - {x: 0.29205486, y: -0.023318551}
+  - {x: 0.2962591, y: 0.047961373}
+  - {x: 0.06820077, y: 0.22971955}
+  - {x: -0.102079466, y: 0.2344277}
+  - {x: -0.22775224, y: 0.046800822}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
