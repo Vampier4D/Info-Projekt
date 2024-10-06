@@ -15,3 +15,6 @@ MonoBehaviour:
   itemName: Holz
   icon: {fileID: 21300000, guid: dafddc68237277f4884d3c7ccdf94c0a, type: 3}
   description: Ein Holz
+  baseRarity: 1
+  useCondition: 1
+  startingCondition: 0

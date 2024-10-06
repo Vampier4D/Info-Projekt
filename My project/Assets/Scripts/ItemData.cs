@@ -8,6 +8,10 @@ public class ItemData : ScriptableObject {
     public Sprite icon;
 [TextArea]
 public string description;
+
+    public int baseRarity;
+    public bool useCondition;
+    public int startingCondition;
 }
 
   
