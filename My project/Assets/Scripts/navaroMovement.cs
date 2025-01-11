@@ -40,7 +40,7 @@ public class navaroMovement : MonoBehaviour {
     }
     private void FixedUpdate()
     {
-        controllerNavaro.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
+        controllerNavaro.Move(horizontalMove * Time.fixedDeltaTime, jump);
         jump = false;
     }
 }
