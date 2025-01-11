@@ -386,6 +386,7 @@
 -analyzer:"C:/Program Files/Unity 2022.3.45f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/Movment.cs"
 "Assets/Scripts/navaroMovement.cs"
+"Assets/Scripts/worldGen.cs"
 -langversion:9.0
 /deterministic
 /optimize+

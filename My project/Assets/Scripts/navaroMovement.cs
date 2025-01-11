@@ -8,7 +8,6 @@ public class navaroMovement : MonoBehaviour {
 
     float horizontalMove = 0f;
     bool jump = false;
-    bool crouch = false;
 
     public float runSpeed = 40f;
 
@@ -28,14 +27,6 @@ public class navaroMovement : MonoBehaviour {
         }else if(Input.GetButtonUp("Jump"))
         {
             jump= false;
-        }
-        if(Input.GetButtonDown("Crouch"))
-        {
-            crouch = true;
-        }else if (Input.GetButtonUp("Crouch"))
-        {
-            crouch= false;
-
         }
     }
     private void FixedUpdate()
