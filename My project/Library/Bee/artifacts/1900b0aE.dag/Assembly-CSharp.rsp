@@ -387,6 +387,7 @@
 "Assets/Scripts/Movment.cs"
 "Assets/Scripts/navaroMovement.cs"
 "Assets/Scripts/worldGen.cs"
+"Assets/Scripts/worldGenPerlin.cs"
 -langversion:9.0
 /deterministic
 /optimize+

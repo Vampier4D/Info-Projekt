@@ -5,7 +5,7 @@ using UnityEngine;
 public class WorldGen : MonoBehaviour
 {
     [SerializeField] private int width, height, diffrenceUp, diffrenceDown, plusX, plusY, plusMinus;
-    [SerializeField] private GameObject grass, dirt;
+    [SerializeField] private GameObject grass, dirt, stone;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,28 +19,30 @@ public class WorldGen : MonoBehaviour
        if (plusMinus == 1) {
          for (int x = 0; x < width; x ++)
          {
-             int minHeight = height - diffrenceDown; 
+       int minHeight = height - diffrenceDown; 
              int maxHeight = height + diffrenceUp;
              height = Random.Range(minHeight, maxHeight);  
              for (int y = 0; y < height; y++)
              {
-                 spawnObject(dirt, x + plusX, y + plusY);
+                 spawnObject(stone, x + plusX, y -1 + plusY);
              }
              spawnObject(grass, x + plusX, height + plusY);
+             spawnObject(dirt, x + plusX, height + plusY -1);
          
         }
        }else if (plusMinus == -1) {
          for (int x = 0; x > width; x --)
          {
+            
              int minHeight = height - diffrenceDown; 
              int maxHeight = height + diffrenceUp;
              height = Random.Range(minHeight, maxHeight);  
              for (int y = 0; y < height; y++)
              {
-                 spawnObject(dirt, x + plusX, y + plusY);
+                 spawnObject(stone, x + plusX, y -1 + plusY);
              }
              spawnObject(grass, x + plusX, height + plusY);
-         
+             spawnObject(dirt, x + plusX, height + plusY -1);
         }
     }
     }
