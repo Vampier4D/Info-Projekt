@@ -654,13 +654,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 406335826}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -71, y: -27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 125777062}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!483693784 &406335828
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -1223,18 +1223,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4150573991a6b84b9f64afe9e3986f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 500
+  width: 5000
+  generateLeft: 1
+  plusY: 0
   plusX: 0
-  plusY: 100
-  left: 1
   dirtTilemap: {fileID: 406335829}
   grassTilemap: {fileID: 1355699574}
   stoneTilemap: {fileID: 1493677836}
   dirtTile: {fileID: 11400000, guid: 0c98785e31d58de4cace6fc855862ae9, type: 2}
   grassTile: {fileID: 11400000, guid: 71a56631b4b41964c906d4141bdc5a20, type: 2}
   stoneTile: {fileID: 11400000, guid: e82f94e1de8289a42b133f00b8ae1e8d, type: 2}
-  heightValue: 42
-  smoothness: 33
+  heightValue: 87.2
+  smoothness: 100
 --- !u!1 &933214394
 GameObject:
   m_ObjectHideFlags: 0
@@ -1470,12 +1470,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_JumpForce: 1500
   m_MovementSmoothing: 0.05
-  m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 8
   m_GroundCheck: {fileID: 1799243460}
-  m_CeilingCheck: {fileID: 549402322}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -69947,13 +69945,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1355699571}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -71, y: -27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 125777062}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!483693784 &1355699573
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -70067,13 +70065,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1493677833}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -71, y: -27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 125777062}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!483693784 &1493677835
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -70207,11 +70205,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 500
   height: 50
-  diffrenceUp: 2
-  diffrenceDown: 1
+  differenceUp: 0
+  differenceDown: 0
   plusX: 129
   plusY: -26
-  plusMinus: 1
+  generateLeft: 0
   grass: {fileID: 12262022}
   dirt: {fileID: 933214394}
   stone: {fileID: 658550287}

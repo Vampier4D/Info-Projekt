@@ -1,54 +1,57 @@
+
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class WorldGen : MonoBehaviour
 {
-    [SerializeField] private int width, height, diffrenceUp, diffrenceDown, plusX, plusY, plusMinus;
+    [SerializeField] private int width, height, differenceUp, differenceDown, plusX, plusY;
+    [SerializeField] private bool generateLeft;
     [SerializeField] private GameObject grass, dirt, stone;
-    // Start is called before the first frame update
+    
     void Start()
     {
-       GenerateWorld(); 
+        GenerateWorld();
     }
 
-    // Update is called once per frame
+
     void GenerateWorld()
     {
 
-       if (plusMinus == 1) {
-         for (int x = 0; x < width; x ++)
-         {
-       int minHeight = height - diffrenceDown; 
-             int maxHeight = height + diffrenceUp;
-             height = Random.Range(minHeight, maxHeight);  
-             for (int y = 0; y < height; y++)
-             {
-                 spawnObject(stone, x + plusX, y -1 + plusY);
-             }
-             spawnObject(grass, x + plusX, height + plusY);
-             spawnObject(dirt, x + plusX, height + plusY -1);
-         
+        if (generateLeft == false)
+        {
+            for (int x = 0; x < width; x++)
+            {
+                generate(x);
+
+            }
         }
-       }else if (plusMinus == -1) {
-         for (int x = 0; x > width; x --)
-         {
-            
-             int minHeight = height - diffrenceDown; 
-             int maxHeight = height + diffrenceUp;
-             height = Random.Range(minHeight, maxHeight);  
-             for (int y = 0; y < height; y++)
-             {
-                 spawnObject(stone, x + plusX, y -1 + plusY);
-             }
-             spawnObject(grass, x + plusX, height + plusY);
-             spawnObject(dirt, x + plusX, height + plusY -1);
+        else
+        {
+            for (int x = 0; x > width; x--)
+            {
+                generate(x);
+
+            }
         }
     }
-    }
-    private void spawnObject(GameObject obj, int width, int height)
+    private void spawnObject(GameObject obj, int x, int y)
     {
-        obj = Instantiate(obj, new Vector2(width, height), Quaternion.identity);
+        obj = Instantiate(obj, new Vector2(x, y), Quaternion.identity);
         obj.transform.parent = this.transform;
+    }
+    private void generate(int x)
+    {
+        int minHeight = height - differenceDown;
+        int maxHeight = height + differenceUp;
+        height = Random.Range(minHeight, maxHeight);
+        for (int y = 0; y < height; y++)
+        {
+            spawnObject(stone, x + plusX, y - 1 + plusY);
+        }
+        spawnObject(grass, x + plusX, height + plusY);
+        spawnObject(dirt, x + plusX, height + plusY - 1);
     }
 }

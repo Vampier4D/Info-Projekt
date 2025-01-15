@@ -1,3 +1,5 @@
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,8 +11,7 @@ public class WorldGeneratorPerlin : MonoBehaviour
     [SerializeField] private int width;
     [SerializeField] private bool generateLeft;
     [SerializeField] private int plusY;
-    [SerializeField] private int plusX = 0;
-    [SerializeField] private bool left;
+    [SerializeField] private int plusX;
     [SerializeField] private Tilemap dirtTilemap, grassTilemap, stoneTilemap;
     [SerializeField] private TileBase dirtTile;
     [SerializeField] private TileBase grassTile;
@@ -26,12 +27,11 @@ public class WorldGeneratorPerlin : MonoBehaviour
     {
         if (generateLeft == true)
         {
-            if (left == true)
 
-                for (int x = 0; x < width; x++)
-                {
-                    generator(x);
-                }
+            for (int x = 0; x < width; x++)
+            {
+                generator(x);
+            }
         }
         else
         {
@@ -42,16 +42,16 @@ public class WorldGeneratorPerlin : MonoBehaviour
         }
     }
     private void generator(int x)
-{
-    float perlinValue = Mathf.PerlinNoise(x / smoothness, 0);
-    int height = Mathf.RoundToInt(heightValue * perlinValue);
-    for (int y = 0; y < height; y++)
     {
-        stoneTilemap.SetTile(new Vector3Int(x + plusX, y + plusY, 0), stoneTile);
+        float perlinValue = Mathf.PerlinNoise(x / smoothness, 0);
+        int height = Mathf.RoundToInt(heightValue * perlinValue);
+        for (int y = 0; y < height; y++)
+        {
+            stoneTilemap.SetTile(new Vector3Int(x + plusX, y + plusY, 0), stoneTile);
+        }
+        grassTilemap.SetTile(new Vector3Int(x + plusX, height + plusY, 0), grassTile);
+        dirtTilemap.SetTile(new Vector3Int(x + plusX, height + plusY - 1, 0), dirtTile);
     }
-    grassTilemap.SetTile(new Vector3Int(x + plusX, height + plusY, 0), grassTile);
-    dirtTilemap.SetTile(new Vector3Int(x + plusX, height + plusY - 1, 0), dirtTile);
-}
 }
 
 
